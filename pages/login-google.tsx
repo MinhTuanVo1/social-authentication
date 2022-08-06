@@ -7,7 +7,6 @@ const LoginGoogle: NextPage = () => {
     
     const handleSuccess = (response: CredentialResponse) => {
         if ('credential' in response) {
-        
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/google-authentication`, {
                 method: 'POST',
                 body: JSON.stringify({
